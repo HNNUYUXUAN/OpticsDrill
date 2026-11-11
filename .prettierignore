@@ -1,0 +1,7 @@
+node_modules
+dist
+.local
+.playwright-cli
+output
+src/data/bank.json
+package-lock.json
