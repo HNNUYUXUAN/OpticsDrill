@@ -15,10 +15,12 @@
 
 ## 维护入口
 
-题面、检查项与辨析维护于sources/questions.json；完整推导维护于sources/solutions/。sources/meta.json保存课程清单和题库版本。运行npm run figures与npm run bank生成科学图和运行库，再进行测试与生产构建。
+题面、检查项与辨析维护于sources/questions.json；完整推导维护于sources/solutions/。sources/meta.json保存课程清单和题库版本。sources/provenance.json锁定已核验原题与原图哈希。运行npm run figures与npm run bank生成科学图和运行库，再进行测试与生产构建。
 
-新应用标识OpticsDrill，存储键opticsdrill.v1；JSON备份校验应用身份。旧版各章练习包保留独立学习记录，本版不自动迁移。
+新应用标识OpticsDrill，存储键opticsdrill.v1；JSON备份校验应用身份。旧版各章HTML练习包保留各自独立记录。统一应用版本1、2的数据在升级时完整归档，可在设置页导出；新版进度重新开始。
 
 ## 本地材料
 
 原始346个文件归入.local/materials，完整路径与哈希映射见.local/materials/migration.json，入口索引见.local/materials/index.md。每章保留html/与md/，教材与扫描分开归档。额外题保留在原包，统一应用只统计课程指定52题。该目录由Git忽略。
+
+本次重建的逐题页序、跨页与裁图证据入口为.local/rebuild/README.md。原材料索引中的旧选页记录作为历史证据保留；新版定位以权威全本PDF和.local/rebuild/page-map.json为准。

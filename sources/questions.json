@@ -3,8 +3,8 @@
     "id": "1.1",
     "categoryId": "1",
     "title": "双缝条纹的波长依赖",
-    "page": "教材第59—61页",
-    "prompt": "双缝间距0.022 cm、缝屏距离1.80 m。分别使用500 nm和700 nm光，求亮纹间距及两种光第二级亮纹的位置差。",
+    "page": "教材印刷第59页；PDF第75页",
+    "prompt": "波长为500 nm的绿光投射在间距d为0.022 cm的双缝上，在距离r₀为180 cm处的光屏上形成干涉条纹，求两个亮条纹之间的距离。若改用波长为700 nm的红光投射到此双缝上，两个亮纹之间的距离又为多少？算出这两种光第2级亮纹位置的距离。",
     "check": "输入500 nm光的条纹间距，单位mm，保留两位小数。",
     "expected": "4.09",
     "result": "两种间距约4.09、5.73 mm，第二级亮纹位置差约3.27 mm。",
@@ -17,14 +17,21 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "6c01966db07c8f8218c7b11529a63445d5454f9aed7a54c63e4df4c5a1b96173"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.2",
     "categoryId": "1",
     "title": "双缝相位与强度",
-    "page": "教材第59—61页",
-    "prompt": "双缝间距0.40 mm，屏距0.50 m，波长640 nm。求一级亮纹位置；对离中央0.10 mm的P点，求相位差及相对于中央的强度。",
+    "page": "教材印刷第59页；PDF第75页",
+    "prompt": "在杨氏实验装置中，光源波长为640 nm，两狭缝间距d为0.4 mm，光屏离狭缝的距离r₀为50 cm。试求：（1）光屏上第1级亮条纹和中央亮条纹之间的距离；（2）若P点离中央亮条纹为0.1 mm，问两束光在P点的相位差是多少？（3）求P点的光强度和中央点的强度之比。",
     "check": "输入一级亮纹离中央的距离，单位mm，写成0.800。",
     "expected": "0.800",
     "result": "$y_1=0.800\\,\\mathrm{mm}$，$\\delta=\\pi/4$，$I/I_c\\approx0.8536$。",
@@ -37,14 +44,21 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "a819d66737543954f9bfe879580ec942e7ceb915c9ad44362b8b204b985f788a"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.3",
     "categoryId": "1",
     "title": "插片引起的条纹平移",
-    "page": "教材第59—61页",
-    "prompt": "在双缝一条光路加入折射率1.5的玻璃片，原第五级亮纹处变为中央亮纹。光波长600 nm，求片厚。",
+    "page": "教材印刷第60页；PDF第76页",
+    "prompt": "把折射率为1.5的玻璃片插入杨氏实验的一束光路中，光屏上原来第5级亮条纹所在的位置变为中央亮条纹，试求插入的玻璃片的厚度。已知光波长为600 nm。",
     "check": "输入片厚，单位μm，写成6.00。",
     "expected": "6.00",
     "result": "厚度6.00 μm。",
@@ -57,14 +71,21 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "d6cd98f4d9cfaaf2a764af32e52a11a66647b4d34213a45d31b78d435e8c64fc"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.4",
     "categoryId": "1",
     "title": "不等强双缝的可见度",
-    "page": "教材第59—61页",
-    "prompt": "两缝相距0.20 mm，屏距0.50 m，波长500 nm，两缝出射光强比2∶1。求条纹间距与可见度。",
+    "page": "教材印刷第60页；PDF第76页",
+    "prompt": "波长为500 nm的单色平行光射在间距d为0.2 mm的双狭缝上。通过其中一个缝的能量为另一个的2倍，在离狭缝50 cm的光屏上形成干涉图样。求干涉条纹间距和条纹的可见度。",
     "check": "输入条纹间距，单位mm，保留两位小数。",
     "expected": "1.25",
     "result": "$\\Delta x=1.25\\,\\mathrm{mm}$，$V=2\\sqrt2/3\\approx0.943$。",
@@ -77,34 +98,48 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "206497294d451bda5b6e37c5c94b2948c213f8f6603bc245619311d993973800"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.7",
     "categoryId": "1",
     "title": "肥皂膜的反射亮纹",
-    "page": "教材第59—61页",
-    "prompt": "700 nm光在空气中以30°入射折射率1.33的肥皂膜。求第二级反射亮纹的膜厚（由最薄亮膜起计）。",
-    "check": "输入膜厚近似值，单位nm，取整数。",
-    "expected": "426",
-    "result": "膜厚约426 nm，第二级对应$2nt\\cos r=3\\lambda/2$。",
+    "page": "教材印刷第60页；PDF第76页",
+    "prompt": "试求能产生红光（λ=700 nm）的二级反射亮干涉条纹的肥皂膜厚度。已知肥皂膜折射率为1.33，且平行光与法向成30°角入射。",
+    "check": "按教材从0起的干涉级次，输入二级膜厚，单位nm，取整数。",
+    "expected": "710",
+    "result": "按教材j=2，膜厚约710 nm。",
     "judgment": {
-      "correct": "膜内角度应由折射定律求出。",
-      "incorrect": "薄膜光程差中的角度直接取空气入射角30°。",
-      "reason": "一次半波损失下$2nt\\cos r=(m+1/2)\\lambda$；$n\\sin r=\\sin i$。"
+      "correct": "教材干涉级次从j=0开始，二级取j=2。",
+      "incorrect": "本题二级可直接改成从最薄亮膜数起的第2个亮膜。",
+      "reason": "教材式(1-35)为2nt cos r=(j+1/2)λ，j=0,1,2,…。"
     },
     "tags": [
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "1967e6b1ba02a222634d1de7dfe4ed3202b896e6865c5bf349c23a5b3ebc8a99"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.8",
     "categoryId": "1",
     "title": "单层增透膜",
-    "page": "教材第59—61页",
-    "prompt": "透镜表面镀折射率1.38的MgF₂膜，希望550 nm光正入射时反射最弱。求最小厚度，并说明零反射的附加条件。",
+    "page": "教材印刷第60页；PDF第76页",
+    "prompt": "透镜表面通常镀一层如MgF₂（n=1.38）一类的透明物质薄膜，目的是利用干涉来降低玻璃表面的反射。为了使透镜在可见光谱的中心波长（550 nm）处产生极小的反射，则镀层最小厚度为多少？",
     "check": "输入最小膜厚，单位nm，保留一位小数。",
     "expected": "99.6",
     "result": "$t=\\lambda/(4n)\\approx99.6\\,\\mathrm{nm}$；零反射还需振幅匹配。",
@@ -117,14 +152,21 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "5820343e50ab58f7e05cd9c271c6b64a7b70f575402321273f3bea705409261f"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.11",
     "categoryId": "1",
     "title": "薄玻璃片的反射增强谱",
-    "page": "教材第59—61页",
-    "prompt": "厚1.2 μm、折射率1.5的玻璃片位于空气中，受可见光正入射。取400—760 nm范围，列出反射增强的波长。",
+    "page": "教材印刷第60页；PDF第76页",
+    "prompt": "波长为400～760 nm的可见光正射在一块厚度为1.2×10⁻⁶ m、折射率为1.5的薄玻璃片上，试问从玻璃片反射的光中哪些波长的光最强。",
     "check": "输入该范围内反射增强波长的个数。",
     "expected": "4",
     "result": "约654.5、553.8、480.0、423.5 nm，共4种。",
@@ -137,14 +179,21 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "48287d8309d29aefed552c54c075fa70107a378b390a2cc2951309b2596b79bd"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.12",
     "categoryId": "1",
     "title": "迈克耳孙镜移与波长",
-    "page": "教材第59—61页",
-    "prompt": "迈克耳孙干涉仪中，垂直入射时反射镜移动0.25 mm，视场移过909条条纹。求光源波长。",
+    "page": "教材印刷第60页；PDF第76页",
+    "prompt": "迈克耳孙干涉仪的反射镜M₂移动0.25 mm时，看到条纹移过的数目为909个，设光为垂直入射，求所用光源的波长。",
     "check": "输入波长，单位nm，取整数。",
     "expected": "550",
     "result": "波长约550 nm。",
@@ -157,14 +206,21 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "b1174a0dcabd03d38287a008818cf73666b496a5ed7f7006fdc39e5cd70d55ab"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.15",
     "categoryId": "1",
     "title": "牛顿环直径平方差",
-    "page": "教材第59—61页",
-    "prompt": "反射牛顿环中相隔五级的两亮环直径为3.0和4.6 mm，透镜曲率半径1.03 m，求入射波长。",
+    "page": "教材印刷第60、61页；PDF第76、77页",
+    "prompt": "用单色光观察牛顿环，测得j级亮环的直径为3 mm，在它的第j+5级亮环的直径为4.6 mm，所用平凸透镜的凸面曲率半径为1.03 m，求此单色光的波长。",
     "check": "输入波长，单位nm，取整数。",
     "expected": "590",
     "result": "波长约590 nm。",
@@ -177,37 +233,51 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "4c8d7cd385cc7595d5718f6bcace7877b3c2763a1c3e285bea3c62e1c8b8105f"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.16",
     "categoryId": "1",
     "title": "高阶亮环的径向间距",
-    "page": "教材第59—61页",
-    "prompt": "反射牛顿环中，从最内亮环计第2、3亮环的半径差为1 mm，求第19、20亮环的半径差。",
+    "page": "教材印刷第61页；PDF第77页",
+    "prompt": "在反射光中观察某单色光所形成的牛顿环，其第2级亮环与第3级亮环间距为1 mm，求第19和20级亮环之间的距离。",
     "check": "输入所求间距，单位mm，保留三位小数。",
-    "expected": "0.322",
-    "result": "约0.3218848 mm，取0.322 mm。",
+    "expected": "0.386",
+    "result": "按教材级次定义，所求间距约0.386 mm。",
     "judgment": {
-      "correct": "第1环起计时，半径平方含m−1/2。",
-      "incorrect": "第1环起计时，半径平方含m+1/2。",
-      "reason": "由内向外第$m$亮环满足$r_m^2=(m-1/2)\\lambda R$，$m=1,2,\\ldots$。"
+      "correct": "教材反射亮环满足r_j²=(j+1/2)λR，j从0起。",
+      "incorrect": "保持原题级次不变时，反射亮环满足r_j²=(j−1/2)λR。",
+      "reason": "使用教材印刷48页式(1-41)，分别代入j=2、3、19、20。"
     },
     "tags": [
       "光的干涉",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "e0e205a95efd6a4a37a23d33e679a0be95cd23ac52d10c80af820ff78e5ee711"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "1.19",
     "categoryId": "1",
     "title": "切割透镜产生的相干虚源",
-    "page": "教材第59—61页",
-    "prompt": "焦距50 cm的会聚透镜切去中央宽1 cm条带后，将两半相向合拢。点源在组合对称轴上、距透镜25 cm，屏在另一侧50 cm。对692 nm光求条纹间距及形状。",
+    "page": "教材印刷第61页；PDF第77页",
+    "prompt": "如题1.19图所示，将焦距为50 cm的会聚透镜中央部分C切去，余下的A、B两部分仍旧黏起来，C的宽度为1 cm。在对称轴线上距透镜25 cm处置一点光源，发出波长为692 nm的激光，在对称轴线上透镜的另一侧50 cm处置一光屏，屏面垂直于轴线。试求：\n（1）干涉条纹的间距是多少？\n（2）光屏上呈现的干涉图样是怎样的？",
     "check": "输入条纹间距，单位mm，保留四位小数。",
     "expected": "0.0692",
-    "result": "两虚源相距1 cm，到屏距离1 m；间距0.0692 mm，为近轴等间距直纹。",
+    "result": "条纹间距0.0692 mm；通常足够口径模型下，切口限定1 cm宽重叠带，直条纹平行切口，中心亮。",
     "judgment": {
       "correct": "条纹公式应使用虚源到屏的1 m距离。",
       "incorrect": "条纹公式应只使用透镜到屏的0.5 m距离。",
@@ -217,14 +287,26 @@
       "光的干涉",
       "课程指定"
     ],
-    "figure": "figures/split-interference.svg"
+    "figure": "",
+    "figures": [
+      {
+        "src": "figures/q-1-19-1.png",
+        "alt": "题1.19图（PDF原题图）"
+      }
+    ],
+    "source": {
+      "identity": "8d655404cf4c420b610101b0d6dfcaa7fb99c8bebb225b7e67c8b8992d877b96"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "2.1",
     "categoryId": "2",
     "title": "菲涅耳半波带半径",
-    "page": "教材第102—104页",
-    "prompt": "平行光照射小圆孔，将孔面相对轴上观察点分成半波带。求第k带边界半径；孔屏距1 m、波长450 nm时求第一带半径。",
+    "page": "教材印刷第102页；PDF第118页",
+    "prompt": "一平行单色光照射到一小圆孔上，将其波面分成半波带，求第k个带的半径。若极点到观察点的距离r₀为1 m，单色光波长为450 nm，求此时第一半波带的半径。",
     "check": "输入第一带半径，单位mm，保留三位小数。",
     "expected": "0.671",
     "result": "第一带半径约0.671 mm。",
@@ -237,14 +319,21 @@
       "光的衍射",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "473525109410b19579a5f18fda397c91c0e5636908a68ce2829c282884279a8a"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "2.2",
     "categoryId": "2",
     "title": "可变圆孔的轴上明暗",
-    "page": "教材第102—104页",
-    "prompt": "500 nm平行光照射可变圆孔，轴上P点距孔4 m。给出P点强度极大、极小的孔径条件，并求第一最亮状态的孔直径。",
+    "page": "教材印刷第102页；PDF第118页",
+    "prompt": "一平行单色光从左向右垂直射到一个有圆形小孔的屏上，设此孔可以像摄像机光圈那样改变大小。试问：（1）小孔半径应满足什么条件时，才能使得此小孔右侧轴线上距小孔中心4 m的P点的光强分别得到极大值和极小值；（2）P点最亮时，小孔直径应为多大？设此光的波长为500 nm。",
     "check": "输入第一最亮状态的孔直径，单位mm，保留两位小数。",
     "expected": "2.83",
     "result": "奇数半波带为极大，偶数半波带为极小；第一极大孔直径约2.83 mm。",
@@ -257,14 +346,21 @@
       "光的衍射",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "f43d230caeebcdca8bbee9e01f23302b1119f147b1bf294b9e17403db239455c"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "2.3",
     "categoryId": "2",
     "title": "环形孔的半波带叠加",
-    "page": "教材第102—104页",
-    "prompt": "500 nm点源距环形光阑1 m，轴上观察点亦距光阑1 m；透光环内、外半径为0.5、1.0 mm。求相对于无遮挡情况的轴上强度。",
+    "page": "教材印刷第102页；PDF第118页",
+    "prompt": "波长为500 nm的单色点光源离光阑1 m，光阑上有一个内外半径分别为0.5 mm和1 mm的透光圆环，接收点P离光阑1 m，求P点的光强I与没有光阑时的光强度I₀之比。",
     "check": "输入半波带近似下的强度比I/I₀。",
     "expected": "4",
     "result": "透过第2至4半波带，近似强度比为4。",
@@ -277,14 +373,21 @@
       "光的衍射",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "2b01e378e37410a3e4428c5eb84ec1a3f646a8fbcc974800714b53140865eaaa"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "2.7",
     "categoryId": "2",
     "title": "缝宽相位差与焦面坐标",
-    "page": "教材第102—104页",
-    "prompt": "480 nm平行光垂直照射宽0.40 mm狭缝，透镜焦距60 cm。求缝两边到P点相位差π/2、π/6时P点距焦点的距离。",
+    "page": "教材印刷第102、103页；PDF第118、119页",
+    "prompt": "一平行单色光的波长为480 nm，垂直照射到宽度为0.4 mm的狭缝上，会聚透镜的焦距为60 cm。分别计算当缝的两边到P点的相位差为π/2和π/6时，P点离焦点的距离。",
     "check": "输入相位差π/2时的距离，单位mm，保留两位小数。",
     "expected": "0.18",
     "result": "分别0.18、0.060 mm。",
@@ -297,14 +400,21 @@
       "光的衍射",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "9ebc8cdd9b63e6546bdc9030092f99b3728df9e53b061f1dbbc758d6b220c2e0"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "2.8",
     "categoryId": "2",
     "title": "单缝次极大的重合波长",
-    "page": "教材第102—104页",
-    "prompt": "白光单缝衍射中，某波长的第三个次极大与600 nm光的第二个次极大重合。用精确条件求未知波长，并比较常用近似。",
+    "page": "教材印刷第103页；PDF第119页",
+    "prompt": "白光形成的单缝衍射图样中，其中某一波长的第三个次最大值与波长为600 nm的光波的第二个次最大值重合。求该光波的波长。",
     "check": "输入精确条件所得波长，单位nm，保留一位小数。",
     "expected": "425.1",
     "result": "精确解425.0825 nm（取425.1 nm）；半整数近似428.6 nm。",
@@ -317,14 +427,21 @@
       "光的衍射",
       "课程指定"
     ],
-    "figure": "figures/single-slit.svg"
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "d4ca760941b6abc83c1198b0d42f625e72f34ad1bfb4f883cf3c252060a644ae"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "2.14",
     "categoryId": "2",
     "title": "由高阶谱线求光栅密度",
-    "page": "教材第102—104页",
-    "prompt": "589 nm光正入射光栅，第二十级主极大偏离中央15°10′。求每厘米刻痕数。",
+    "page": "教材印刷第103页；PDF第119页",
+    "prompt": "用波长为589 nm的平行单色光照射一衍射光栅，其光谱的中央最大值和第二十级主最大值之间的衍射角为15°10′，试求该光栅1 cm内的缝数。",
     "check": "输入每厘米刻痕数，取整数。",
     "expected": "222",
     "result": "每厘米约222条刻痕。",
@@ -337,14 +454,21 @@
       "光的衍射",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "5efd75ed8cc9436b66d1bcc1585b6cb1c69c549f7bd199e594bc8b39d6301b81"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "2.15",
     "categoryId": "2",
     "title": "光栅的最高级次",
-    "page": "教材第102—104页",
-    "prompt": "每毫米400条刻痕的光栅观察589 nm光，比较正入射与30°斜入射的最高级次，并说明两侧差别。",
+    "page": "教材印刷第103页；PDF第119页",
+    "prompt": "用每毫米内有400条刻痕的平面透射光栅观察波长为589 nm的钠光谱。试问：（1）光垂直入射时，最多能观察到几级光谱？（2）光以30°角入射时，最多能观察到几级光谱？",
     "check": "输入30°斜入射可达的最大级次。",
     "expected": "6",
     "result": "正入射最高4级，斜入射两侧最高分别6、2级。",
@@ -357,14 +481,21 @@
       "光的衍射",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "255aa5e15f26fad78bd94c4c4e1eb92b0101816d26e124874ebb0f7b9c31914b"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "2.16",
     "categoryId": "2",
     "title": "同角度的重叠光谱",
-    "page": "教材第102—104页",
-    "prompt": "白光正入射每毫米250条刻痕的光栅。取400—760 nm可见范围，求30°方向出现的波长及颜色。",
+    "page": "教材印刷第103页；PDF第119页",
+    "prompt": "白光垂直照射到一个每毫米250条刻痕的平面透射光栅上，试问在衍射角为30°处会出现哪些波长的光？其颜色如何？",
     "check": "输入该方向可见波长的个数。",
     "expected": "3",
     "result": "666.7 nm红光、500 nm绿光、400 nm紫光，分别来自3、4、5级。",
@@ -377,14 +508,21 @@
       "光的衍射",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "7e60606394c530c4f783b2a94e752e52efe90c20d8c8e14cd37a580a9e8a3f38"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "3.3",
     "categoryId": "3",
     "title": "玻璃平板的视深位移",
-    "page": "教材第149—152页",
-    "prompt": "厚30 cm、折射率1.5的平行玻璃板置于眼睛与物体之间。近轴观察时，求物体的像相对物体沿视线移动的距离。",
+    "page": "教材印刷第149页；PDF第165页",
+    "prompt": "眼睛E和物体PQ之间有一块折射率为1.5的玻璃平板（见题3.3图），平板的厚度d为30 cm。试求物体PQ的像P′Q′与物体PQ之间的距离d₂为多少？",
     "check": "输入位移大小，单位cm，取整数。",
     "expected": "10",
     "result": "像向观察者移动10 cm。",
@@ -397,14 +535,26 @@
       "几何光学",
       "课程指定"
     ],
-    "figure": "figures/plate.svg"
+    "figure": "",
+    "figures": [
+      {
+        "src": "figures/q-3-3-1.png",
+        "alt": "题3.3图（PDF原题图）"
+      }
+    ],
+    "source": {
+      "identity": "9e13b55a339f9e2165376754c95eb7d1ead2bc93288e3c87c6b5f2aac475b15b"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "3.4",
     "categoryId": "3",
     "title": "棱镜的偏向与透射条件",
-    "page": "教材第149—152页",
-    "prompt": "棱镜顶角60°、折射率1.6。求最小偏向角、对应入射角及能从两侧透出的入射角下限。",
+    "page": "教材印刷第149页；PDF第165页",
+    "prompt": "玻璃棱镜的折射棱角A为60°，对某一波长的光其折射率n为1.6。试计算：（1）最小偏向角；（2）此时的入射角；（3）能使光线从A角两侧透过棱镜的最小入射角。",
     "check": "输入最小偏向角，单位度，保留两位小数。",
     "expected": "46.26",
     "result": "最小偏向角46.26°，对应入射角53.13°；透射入射角下限约35.57°。",
@@ -417,14 +567,21 @@
       "几何光学",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "e3c170030aa6ccf246bfce9f1cd0165885982f862a86c60039399a3c70836a50"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "3.7",
     "categoryId": "3",
     "title": "由虚像大小辨认球面镜",
-    "page": "教材第149—152页",
-    "prompt": "5 cm高的物体位于球面镜前10 cm处，形成1 cm高的正立虚像。求曲率半径，并判断镜面种类。",
+    "page": "教材印刷第149页；PDF第165页",
+    "prompt": "一个5 cm高的物体放在球面镜前10 cm处成1 cm高的虚像。（1）试求此镜的曲率半径；（2）试问此镜是凸面镜还是凹面镜？",
     "check": "以实物实像距为正的镜公式约定，输入R=2f，单位cm。",
     "expected": "-5",
     "result": "$f=-2.5\\,\\mathrm{cm}$、$R=-5\\,\\mathrm{cm}$，为凸面镜。",
@@ -437,34 +594,48 @@
       "几何光学",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "ba7cf228982f6addfd02a597fed10a83dbb29925d780cb510290146db08155ec"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "3.8",
     "categoryId": "3",
     "title": "两种反射像的重合",
-    "page": "教材第149—152页",
-    "prompt": "眼睛距焦距10 cm的凹面镜40 cm。移动眼与镜之间的薄玻璃板，使板的反射像与凹面镜像重合，求板到眼的距离。",
+    "page": "教材印刷第149页；PDF第165页",
+    "prompt": "某观察者通过一块薄玻璃板去看在凸面镜中自己的像。他移动着玻璃板，使得在玻璃板中与在凸面镜中所看到的自己眼睛的像重合在一起。若凸面镜的焦距为10 cm，眼睛距凸面镜顶点的距离为40 cm，试问玻璃板与观察者眼睛之间的距离为多少？",
     "check": "输入板到眼的距离，单位cm，保留一位小数。",
-    "expected": "13.3",
-    "result": "板到眼约13.3 cm，板到镜约26.7 cm。",
+    "expected": "24.0",
+    "result": "眼到玻璃板24 cm，板到凸面镜16 cm。",
     "judgment": {
       "correct": "像重合应比较同一坐标系中的位置。",
       "incorrect": "比较两个像距的绝对值相等就能保证像重合。",
-      "reason": "先由凹面镜公式求像，再以平面镜的对称关系联立坐标。"
+      "reason": "凸面镜取f=-10 cm，求得镜后8 cm虚像，再与平面反射像的坐标联立。"
     },
     "tags": [
       "几何光学",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "c5406e17a316f97345010ac6049ace0d64bd45d4d7e0f0798748e5cf375c1730"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "3.10",
     "categoryId": "3",
     "title": "透明球的顶点聚焦",
-    "page": "教材第149—152页",
-    "prompt": "平行近轴光从空气进入透明球，要求聚焦在球的后表面顶点。求球体的折射率。",
+    "page": "教材印刷第149页；PDF第165页",
+    "prompt": "欲使由无穷远发出的近轴光线通过透明球体并成像在右半球面的顶点处，试问这透明球体的折射率应为多少？",
     "check": "输入所需折射率。",
     "expected": "2",
     "result": "球体折射率$n=2$。",
@@ -477,14 +648,21 @@
       "几何光学",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "b7a4377e9c6435e9f03b812a7100f18f94eac61af8582aa9d325d8893ea88f7f"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "3.11",
     "categoryId": "3",
     "title": "玻璃球的两次折射",
-    "page": "教材第149—152页",
-    "prompt": "空气中玻璃球折射率1.5、半径4 cm，物体位于前表面外6 cm。求最终像到球心的距离和横向放大率。",
+    "page": "教材印刷第149页；PDF第165页",
+    "prompt": "有一折射率为1.5、半径为4 cm的玻璃球，物体在距球表面6 cm处，试求：（1）物所成的像到球心之间的距离；（2）像的横向放大率。",
     "check": "输入最终像到球心的距离，单位cm。",
     "expected": "15",
     "result": "后表面外11 cm，即球心右侧15 cm；横向放大率−1.5。",
@@ -497,14 +675,21 @@
       "几何光学",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "4c78b84b85fd6355502b40c8fd4dcb58122bbf8eb735e05b739e853a6ec895fc"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "3.16",
     "categoryId": "3",
     "title": "透镜在不同介质中的焦距",
-    "page": "教材第149—152页",
-    "prompt": "某凸透镜在空气、水中的焦距分别40、136.8 cm，水折射率1.33。求透镜折射率；再求它在折射率1.62的CS₂中的焦距。",
+    "page": "教材印刷第150页；PDF第166页",
+    "prompt": "一凸透镜在空气中的焦距为40 cm，在水中时焦距为136.8 cm，试问此透镜的折射率为多少（水的折射率为1.33）？若将此透镜置于CS₂中（CS₂的折射率为1.62），其焦距又为多少？",
     "check": "输入透镜折射率，保留两位小数。",
     "expected": "1.54",
     "result": "材料折射率约1.54；在CS₂中焦距约−437.4 cm，表现为发散透镜。",
@@ -517,14 +702,21 @@
       "几何光学",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "8ec2a45cd1e1a543cad49ea1c675d1b3c274c48ecd07dbec32415aa800b6fe0a"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "3.21",
     "categoryId": "3",
     "title": "拼合半透镜的双像",
-    "page": "教材第149—152页",
-    "prompt": "焦距10 cm的会聚透镜切去中央宽1 cm条带，将剩余两半相向粘合。点源在组合对称轴上、距透镜5 cm，求两像的位置。",
+    "page": "教材印刷第150、151页；PDF第166、167页",
+    "prompt": "把焦距为10 cm的会聚透镜的中央部分C切去，C的宽度为1 cm，把余下的A、B两部分黏起来（见题3.21图）。如在其对称轴上距透镜5 cm处放一点光源，试求像的位置。",
     "check": "取实像距为正，输入每个像的轴向像距，单位cm。",
     "expected": "-10",
     "result": "两正立虚像均在物侧10 cm，横向位于轴两侧各0.5 cm，相隔1 cm。",
@@ -537,14 +729,26 @@
       "几何光学",
       "课程指定"
     ],
-    "figure": "figures/split-images.svg"
+    "figure": "",
+    "figures": [
+      {
+        "src": "figures/q-3-21-1.png",
+        "alt": "题3.21图（PDF原题图）"
+      }
+    ],
+    "source": {
+      "identity": "b217ae22259bca52d6708dfc247097750f8442d98130ebac50a495c8972e366b"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "4.2",
     "categoryId": "4",
     "title": "眼的调焦与近点矫正",
-    "page": "教材第192—194页",
-    "prompt": "眼的等效透镜距视网膜2 cm，能看清100—300 cm处物体。求看远点、近点时的焦距；求看清25 cm处物体的一种眼镜方案。",
+    "page": "教材印刷第192页；PDF第208页",
+    "prompt": "把人眼的晶状体简化成距视网膜2 cm的一个凸透镜。有人能看清距离在100 cm到300 cm间的物体，试问：（1）此人看清远点和近点时，眼睛透镜的焦距是多少？（2）为看清25 cm远的物体，需佩戴怎样的眼镜？",
     "check": "把25 cm物体成虚像到原近点100 cm，输入眼镜光焦度，单位D，保留两位小数。",
     "expected": "3.00",
     "result": "远点、近点焦距约1.987、1.961 cm；近点端方案为+3.00 D凸透镜。",
@@ -557,14 +761,21 @@
       "光学仪器",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "7901b1d5f0f707b804c8d7c3bd50bf8d3eb4c469d42ed7b7aa355ae342ba1b81"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "4.3",
     "categoryId": "4",
     "title": "照相机的最近拍摄距离",
-    "page": "教材第192—194页",
-    "prompt": "相机对准远物时底片距物镜18 cm，最大拉伸后距离20 cm。按薄透镜模型求最近物距。",
+    "page": "教材印刷第192页；PDF第208页",
+    "prompt": "一照相机对准远物时，底片距物镜18 cm，当镜头拉至最大长度时，底片与物镜相距20 cm，试求目的物在镜头前的最近距离？",
     "check": "输入最近物距，单位m，保留两位小数。",
     "expected": "1.80",
     "result": "最近物距1.80 m。",
@@ -577,14 +788,21 @@
       "光学仪器",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "3cdce378f239b60724a16a4d4d30f05e03be04089cf9184a6e6640b1fb6338d2"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "4.5",
     "categoryId": "4",
     "title": "显微镜的组合放大本领",
-    "page": "教材第192—194页",
-    "prompt": "显微镜物镜焦距16、4、1.9 mm，目镜标称5×、10×；三个物镜的像距均为160 mm。求组合的最大、最小放大本领。",
+    "page": "教材印刷第192页；PDF第208页",
+    "prompt": "一显微镜具有三个物镜和两个目镜。三个物镜的焦距分别为16 mm、4 mm和1.9 mm，两个目镜的标示分别为5×和10×。设三个物镜造成的像都能落在像距为160 mm处，试问这显微镜的最大和最小的放大本领各为多少？",
     "check": "输入最小放大本领的数值。",
     "expected": "45",
     "result": "最大约832×，最小45×。",
@@ -597,14 +815,21 @@
       "光学仪器",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "fb4c9b019a546aaddb3f31fc52f5db4028645a1f737b2a4c93c630aa5a766474"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "4.12",
     "categoryId": "4",
     "title": "桌边照度最优的灯高",
-    "page": "教材第192—194页",
-    "prompt": "各向同性点光源位于半径R的圆桌中心正上方。为使桌边照度最大，求灯高与R的比值。",
+    "page": "教材印刷第193页；PDF第209页",
+    "prompt": "一可认为是点光源的节能灯悬在圆桌中央的上空，桌的半径为R，为了使桌的边缘能得到最大的照度，灯应悬在离桌面中心多高处？",
     "check": "输入h/R，按1/sqrt(2)格式书写。",
     "expected": "1/sqrt(2)",
     "result": "最优高度$h=R/\\sqrt2$。",
@@ -617,14 +842,21 @@
       "光学仪器",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "ffa17c41f408da91e30bd9959b56ec83da3c05fec3ad329ab6fa89cf89628ab7"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "4.13",
     "categoryId": "4",
     "title": "离焦光斑的照度",
-    "page": "教材第192—194页",
-    "prompt": "光强15 cd的点源距焦距20 cm薄透镜30 cm，屏放在透镜后80 cm。忽略损耗，求近轴理想模型下圆斑中心照度。",
+    "page": "教材印刷第193页；PDF第209页",
+    "prompt": "一焦距为20 cm的薄透镜，放在发光强度为15 cd的点光源之前30 cm处。在透镜后面80 cm处放一屏，在屏上得到明亮的圆斑。试求不计透镜中光的吸收时，圆斑的中心照度。",
     "check": "输入中心照度，单位lx。",
     "expected": "1500",
     "result": "理想像距60 cm，光斑直径为孔径的1/3，中心照度约1500 lx。",
@@ -637,14 +869,21 @@
       "光学仪器",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "bc922f4dfe0b2b48daa874e0245dc69bc49f5757102194b050d9f1d704f51ba3"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "4.18",
     "categoryId": "4",
     "title": "车灯的衍射分辨距离",
-    "page": "教材第192—194页",
-    "prompt": "两车灯相距1.5 m；瞳孔直径3 mm，光波长550 nm。仅按圆孔衍射瑞利判据估计能分辨两灯的最远距离。",
+    "page": "教材印刷第194页；PDF第210页",
+    "prompt": "夜间自远处驶来轿车的两前灯相距1.5 m。如将眼睛的瞳孔看成产生衍射的圆孔，试估计视力正常的人在多远处才能分辨出光源是两个灯。设眼睛瞳孔的直径为3 mm，设光源发出的光的波长λ为550 nm。",
     "check": "输入最远距离，单位km，保留一位小数。",
     "expected": "6.7",
     "result": "理想衍射极限约6.7 km；实际视觉还受照度和生理条件限制。",
@@ -657,17 +896,24 @@
       "光学仪器",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "d976203da9a48c744e6392acc4654ab9c99235fd310f07a15feab18ca6334149"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "4.19",
     "categoryId": "4",
     "title": "望远镜分辨月面目标",
-    "page": "教材第192—194页",
-    "prompt": "月面目标直径500 m，月地距离取60个地球半径，地球半径6370 km。对550 nm光比较20、160 cm口径望远镜，并求最小理论口径。",
-    "check": "输入最小理论口径，单位m，保留三位小数。",
-    "expected": "0.513",
-    "result": "20 cm不能分辨，160 cm可以；最小口径约0.513 m。",
+    "page": "教材印刷第194页；PDF第210页",
+    "prompt": "用孔径分别为20 cm和160 cm的两种望远镜能否分辨清月球上直径为500 m的环形山？已知月球与地面的距离为地球半径的60倍，而地球半径约为6370 km。设光源发出的光的波长λ为550 nm。",
+    "check": "按20 cm、160 cm口径的顺序输入“能”或“不能”，用逗号分隔。",
+    "expected": "不能,能",
+    "result": "20 cm口径不能分辨，160 cm口径可以分辨。",
     "judgment": {
       "correct": "望远镜口径增大时，理想角分辨极限减小。",
       "incorrect": "望远镜口径增大时，理想角分辨极限增大。",
@@ -677,14 +923,21 @@
       "光学仪器",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "1631453cd0bc62495e312a10635e667c53384ff1d721967e0b5a1a1c72409a8d"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "5.2",
     "categoryId": "5",
     "title": "两偏振片与亮度比较",
-    "page": "教材第245—246页",
-    "prompt": "一个表面直接观察，另一表面隔两偏振片观察，两片夹角60°，观察亮度相同。按每片对允许透射分量另有10%损耗的模型，求后者与前者的实际亮度比。",
+    "page": "教材印刷第245页；PDF第261页",
+    "prompt": "为了比较两个被自然光照射的表面的亮度，对其中一个表面直接进行观察，另一个表面通过两块偏振片来观察。两偏振片的透振方向的夹角为60°。若观察到两表面的亮度相同，试问两表面实际的亮度比是多少？已知光通过每一块偏振片后损失入射光能量的10%。",
     "check": "输入经偏振片观察表面与直接观察表面的实际亮度比，写成分数。",
     "expected": "800/81",
     "result": "实际亮度比$B_2/B_1=800/81\\approx9.88$。",
@@ -697,14 +950,21 @@
       "光的偏振",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "032188352b505386f93421b1084b4307662c085ed26dfe472fad08ed25f27030"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "5.3",
     "categoryId": "5",
     "title": "三片尼科耳的最大透射",
-    "page": "教材第245—246页",
-    "prompt": "两外侧尼科耳主截面相差60°，中间加入第三片，自然光强为I₀，忽略额外吸收。求中间片的最佳方向及最大透射强度。",
+    "page": "教材印刷第245页；PDF第261页",
+    "prompt": "两个尼科耳棱镜N₁和N₂主截面的夹角为60°，在它们之间放置另一个尼科耳棱镜N₃，让平行的自然光通过这个系统。假设各尼科耳棱镜对非常光均无吸收，试问N₃和N₁的主截面的夹角为何值时，通过系统的光强最大？设入射光强为I₀，求此时所能通过的最大光强。",
     "check": "输入最大透射强度与I₀的比值，写成分数。",
     "expected": "9/32",
     "result": "中间片与第一片成30°，最大强度为$9I_0/32$。",
@@ -717,17 +977,24 @@
       "光的偏振",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "fa69b6f170cb3b153976db37f3d12c62ed14ff9a978aafdb6d2a61a68c036631"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "5.9",
     "categoryId": "5",
     "title": "石英四分之一波片",
-    "page": "教材第245—246页",
-    "prompt": "石英片表面平行光轴，nₑ=1.552、nₒ=1.543，设计波长589.3 nm。求最薄四分之一波片厚度。",
-    "check": "输入最薄厚度，单位μm，保留两位小数。",
+    "page": "教材印刷第245页；PDF第261页",
+    "prompt": "有一块平行石英片是沿平行于光轴方向切出的，要把它切成一块黄光的1/4波片，试问这块石英片应有多厚？石英的nₑ=1.552，nₒ=1.543，λ=589.3 nm。",
+    "check": "原题未限定阶次；速刷检查最薄解的厚度，单位μm，保留两位小数。",
     "expected": "16.37",
-    "result": "最薄厚度约16.37 μm。",
+    "result": "最薄解约16.37 μm；其他阶次见完整解答。",
     "judgment": {
       "correct": "波片延迟由折射率差而非单一折射率决定。",
       "incorrect": "波片延迟只由寻常光折射率决定。",
@@ -737,14 +1004,21 @@
       "光的偏振",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "f56b12c31ae6af2afdbc768d81d000c8c7cfc2b14fbcaa086f7db667b31192d0"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "5.12",
     "categoryId": "5",
     "title": "转动波片后的消光方向",
-    "page": "教材第245—246页",
-    "prompt": "正交尼科耳间插入波片后透光；检偏器顺时针转20°可消光，再把波片也顺时针转20°又透光。判断波片性质，并求检偏器还需转过的消光角。",
+    "page": "教材印刷第245、246页；PDF第261、262页",
+    "prompt": "在两个正交尼科耳棱镜N₁和N₂之间垂直插入一块波片，发现N₂后面有光射出。但当N₂绕入射光向顺时针转过20°后，N₂的视场全暗。此时，把波片也绕入射光顺时针转过20°，N₂的视场又亮了。问：\n（1）这是什么性质的波片；\n（2）N₂要转过多大角度才能使N₂的视场又变为全暗。",
     "check": "输入检偏器还需顺时针转过的角度，单位度。",
     "expected": "40",
     "result": "为半波延迟片，检偏器还需顺时针转40°；相对最初位置共60°。",
@@ -757,17 +1031,24 @@
       "光的偏振",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "e89c731a09bdd8a6951d755e2072d3a238799b65d2791031aa50c3f1a9d280e4"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "5.13",
     "categoryId": "5",
     "title": "圆偏振光通过延迟片",
-    "page": "教材第245—246页",
-    "prompt": "圆偏振光分别正入射四分之一波片和八分之一波片。判断透射偏振状态；对后者求椭圆长短半轴之比。",
-    "check": "输入八分之一波片后长半轴/短半轴，按给定根式格式。",
-    "expected": "1+sqrt(2)",
-    "result": "四分之一波片后为线偏振；八分之一波片后为椭圆偏振，轴比$1+\\sqrt2$。",
+    "page": "教材印刷第246页；PDF第262页",
+    "prompt": "一束圆偏振光，（1）垂直入射到1/4波片上，求透射光的偏振状态；（2）垂直入射到1/8波片上，试求透射光的偏振状态。",
+    "check": "按（1）、（2）顺序输入两种偏振类型，名称以“偏振光”结尾，用逗号分隔。",
+    "expected": "线偏振光,椭圆偏振光",
+    "result": "（1）线偏振光；（2）椭圆偏振光。",
     "judgment": {
       "correct": "圆偏振光通过理想四分之一波片可变为线偏振光。",
       "incorrect": "圆偏振光通过理想四分之一波片仍必为圆偏振光。",
@@ -777,14 +1058,21 @@
       "光的偏振",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "74a18ef886cf3c0977a26b698d8db384b9f2fb7148fe56b29ba649239e4dcddd"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "5.18",
     "categoryId": "5",
     "title": "晶片与正交检偏器的消光谱",
-    "page": "教材第245—246页",
-    "prompt": "厚0.025 mm方解石片夹在正交尼科耳间，晶片光轴与两主截面均成45°。求400—760 nm中消光波长；借用题组nₒ=1.658、nₑ=1.486并忽略色散。",
+    "page": "教材印刷第246页；PDF第262页",
+    "prompt": "厚度为0.025 mm的方解石晶片，其表面平行于光轴，放在两个正交的尼科耳棱镜之间，光轴与两个尼科耳棱镜的主截面各成45°。如果射入第一个尼科耳棱镜的光是波长为400～760 nm的可见光，试问透过第二个尼科耳棱镜的光中，少了哪些波长的光？",
     "check": "输入此近似下消失的可见波长个数。",
     "expected": "5",
     "result": "消光波长约430.0、477.8、537.5、614.3、716.7 nm。",
@@ -797,14 +1085,21 @@
       "光的偏振",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "964e52f9484a884b497fb18a27163fec5b3d01da34418ab95be7f2a439f98f4e"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "6.2",
     "categoryId": "6",
     "title": "吸收衰减与介质厚度",
-    "page": "教材第268—269页",
-    "prompt": "介质吸收系数0.32 cm⁻¹。求透射比为0.1、0.2、0.5、0.8时的厚度。",
+    "page": "教材印刷第268页；PDF第284页",
+    "prompt": "某种介质的吸收系数αₐ为0.32 cm⁻¹，试求透射光强为入射光强的0.1、0.2、0.5及0.8倍时，该介质的厚度各为多少？",
     "check": "输入透射比0.1时的厚度，单位cm，保留两位小数。",
     "expected": "7.20",
     "result": "厚度依次约7.20、5.03、2.17、0.697 cm。",
@@ -817,14 +1112,21 @@
       "吸收、散射和色散",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "5d970ef3e820cb56fd547df6ade1449b355d0c31ba760e8f5f1a81d6a2df895f"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "6.4",
     "categoryId": "6",
     "title": "瑞利散射的波长依赖",
-    "page": "教材第268—269页",
-    "prompt": "在同样散射条件、相同入射强度下，比较253.6 nm与546.1 nm光的瑞利散射强度。",
+    "page": "教材印刷第268页；PDF第284页",
+    "prompt": "试计算波长为253.6 nm和546.1 nm的两条谱线瑞利散射的强度之比。",
     "check": "输入短波长/长波长的散射强度比，保留一位小数。",
     "expected": "21.5",
     "result": "强度比约21.5。",
@@ -837,14 +1139,21 @@
       "吸收、散射和色散",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "34696479f333c4f25e45d9d8a8d747447911880555c8efc4d0bbadb80f3acda0"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "6.5",
     "categoryId": "6",
     "title": "自然光瑞利散射的角分布",
-    "page": "教材第268—269页",
-    "prompt": "自然光束进入暗室，比较沿垂直光束方向及与光束成45°方向观察到的瑞利散射强度。",
+    "page": "教材印刷第268页；PDF第284页",
+    "prompt": "太阳光束由小孔射入暗室，室内的人沿着与光束垂直及与之成45°的方向观察这光束时，见到瑞利散射的散射光强度之比等于多少？",
     "check": "输入I(90°)/I(45°)，写成分数。",
     "expected": "2/3",
     "result": "强度比2∶3。",
@@ -857,14 +1166,21 @@
       "吸收、散射和色散",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "b9014b883a328d5f5a0cbb45bbdd67c1a7212fd18c4c05e86d5817e53e7549b7"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "6.7",
     "categoryId": "6",
     "title": "由柯西式求色散率",
-    "page": "教材第268—269页",
-    "prompt": "玻璃在435.8、546.1 nm的折射率分别为1.6130、1.6026。采用两项柯西式，求600 nm处dn/dλ。",
+    "page": "教材印刷第268、269页；PDF第284、285页",
+    "prompt": "一种光学玻璃对于波长435.8 nm和546.1 nm的折射率分别为1.6130和1.6026，试应用柯西公式来计算这种玻璃对波长600 nm的光的色散dn/dλ。",
     "check": "输入dn/dλ，单位nm⁻¹，按-5.04e-5格式。",
     "expected": "-5.04e-5",
     "result": "$dn/d\\lambda\\approx-5.04\\times10^{-5}\\,\\mathrm{nm^{-1}}$。",
@@ -877,14 +1193,21 @@
       "吸收、散射和色散",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "15d1da444c45d9b35032d64ac4c951d3088db18c8a0641e34448e5ecfb575284"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "7.10",
     "categoryId": "7",
     "title": "交流灯丝的辐射起伏",
-    "page": "教材第307—308页",
-    "prompt": "将钨丝视为黑体，平均温度2300 K，最高与最低温度相差80 K。求辐射总功率最大值与最小值之比。",
+    "page": "教材印刷第307页；PDF第323页",
+    "prompt": "用交流供电的灯丝温度是变动的。一电灯白炽时钨丝的平均温度为2300 K，其最高和最低温度之差约为80 K。试问热辐射的总功率的最大值和最小值之比为多少？钨丝的辐射可当做黑体。",
     "check": "输入最大/最小功率比，保留两位小数。",
     "expected": "1.15",
     "result": "功率比约1.15。",
@@ -897,14 +1220,21 @@
       "光的量子性",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "445a4aba1c63df6ab87f098ecb7cb79d0b91c432f2a2b6ae6b8d0f3e6f251c67"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "7.12",
     "categoryId": "7",
     "title": "远处点源的光子通量",
-    "page": "教材第307—308页",
-    "prompt": "按1 W全部转为500 nm平均波长的光，且均匀向各方向辐射，求10 km处垂直光线的每平方厘米每秒光子数。",
+    "page": "教材印刷第307页；PDF第323页",
+    "prompt": "小灯泡所耗的功率为1 W，均匀地向各个方向辐射能量。设辐射的平均波长为500 nm，试求在10 km处每秒钟落在垂直于光线方向上每平方厘米面积上的光子数。",
     "check": "输入每cm²每秒光子数，按2.0e5格式。",
     "expected": "2.0e5",
     "result": "约$2.0\\times10^5\\,\\mathrm{cm^{-2}s^{-1}}$；若1 W为电功率且光效率未知，还需乘光效率。",
@@ -917,14 +1247,21 @@
       "光的量子性",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "0a685df57d6e2f924ec71b287f405112ba77e7755e7627e2f60112bc08d86712"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "7.14",
     "categoryId": "7",
     "title": "光电管的接触电势",
-    "page": "教材第307—308页",
-    "prompt": "253 nm光照钨表面，逸出功4.5 eV，外加1 V遏止电压时光电流截止。求接触电势差大小，并明确代数符号定义。",
+    "page": "教材印刷第307页；PDF第323页",
+    "prompt": "用波长为253 nm的光照射钨的表面时，在光电管的电路中产生的光电流，由于外加1 V的遏止电压而截止。已知钨的逸出功为4.5 eV，试确定接触电势差。",
     "check": "输入接触电势差大小，单位V，保留两位小数。",
     "expected": "0.60",
     "result": "大小约0.60 V；定义$U_{ext}+U_c=U_0$时$U_c\\approx-0.599\\,\\mathrm V$。",
@@ -937,14 +1274,21 @@
       "光的量子性",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "506170b3d1d258aa396c610cf679939c7a34d5ff477a1250307107b3129762ac"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "7.16",
     "categoryId": "7",
     "title": "康普顿位移与电子动能",
-    "page": "教材第307—308页",
-    "prompt": "0.100 nm X射线在碳中发生散射，观察90°方向。求康普顿位移及反冲电子动能。",
+    "page": "教材印刷第307页；PDF第323页",
+    "prompt": "波长为0.1 nm的X射线被碳块散射，在散射角为90°的方向上进行观察。试求：（1）康普顿位移Δλ；（2）反冲电子的动能。",
     "check": "输入波长位移，单位nm，保留六位小数。",
     "expected": "0.002426",
     "result": "位移0.002426 nm，反冲电子动能约294 eV。",
@@ -957,14 +1301,21 @@
       "光的量子性",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "0bcd9983cf5ac653a02a91222a3849d411f881f57541ac4030096a15c6e1d9da"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "7.17",
     "categoryId": "7",
     "title": "由反冲速度反求波长位移",
-    "page": "教材第307—308页",
-    "prompt": "入射光子波长0.003 nm，反冲电子速率0.6c。用相对论能量求散射后的波长增量。",
+    "page": "教材印刷第307页；PDF第323页",
+    "prompt": "已知入射光子的波长为0.003 nm，而反冲电子的速度为光速的β倍（β=0.6），试确定康普顿位移Δλ。",
     "check": "输入波长增量，单位nm，按0.00134格式。",
     "expected": "0.00134",
     "result": "波长增量约0.00134 nm。",
@@ -977,14 +1328,21 @@
       "光的量子性",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "eae36901ee7b7586ee8fd42580b1ff58a38da4be30dc7f22b81a42c7655faa6f"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "8.1",
     "categoryId": "8",
     "title": "氢原子低能级与最小频率",
-    "page": "教材第366—368页",
-    "prompt": "按玻尔模型列出氢原子n=1、2、3、4的能量并画能级图；求这四级间可能跃迁的最小光子频率。",
+    "page": "教材印刷第366页；PDF第382页",
+    "prompt": "（1）试计算氢原子最低的四个能级的能量大小，并把它们画成能级图；（2）试计算这四个能级之间跃迁的最小的频率是多少？",
     "check": "输入最小频率，单位Hz，按1.60e14格式。",
     "expected": "1.60e14",
     "result": "能量约−13.6、−3.40、−1.51、−0.850 eV；最小频率约$1.60\\times10^{14}\\,\\mathrm{Hz}$，对应4↔3。",
@@ -997,14 +1355,21 @@
       "现代光学基础",
       "课程指定"
     ],
-    "figure": "figures/hydrogen-levels.svg"
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "f1aaee12a510a354d8a586b9bbe3472f1e50a223dd72a9ec6db48107e37cf7f9"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "8.2",
     "categoryId": "8",
     "title": "氢原子跃迁的半径与能量",
-    "page": "教材第366—368页",
-    "prompt": "玻尔模型氢原子由n=2跃迁至n=1，求轨道半径及原子能量的有符号变化量（末态减初态）。",
+    "page": "教材印刷第366页；PDF第382页",
+    "prompt": "当玻尔描述的氢原子从n=2的轨道跃迁到n=1的轨道后，试问：（1）轨道半径变化了多少？（2）能量改变了多少？",
     "check": "输入原子能量变化，单位eV，保留一位小数。",
     "expected": "-10.2",
     "result": "$\\Delta r=-3a_0\\approx-1.588\\times10^{-10}\\,\\mathrm m$；$\\Delta E=-10.2\\,\\mathrm{eV}$。",
@@ -1017,14 +1382,21 @@
       "现代光学基础",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "ca59c44c6e9adb973a55296d7cce5c7e5dd3ea9ae8475929eb6861c2304a4464"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   },
   {
     "id": "8.4",
     "categoryId": "8",
     "title": "氦氖激光的相干长度",
-    "page": "教材第366—368页",
-    "prompt": "激光相对谱宽Δλ/λ为6×10⁻¹⁰。按632.8 nm红色氦氖线和窄带近似，估计相干长度，并说明对所选波长的依赖。",
+    "page": "教材印刷第367页；PDF第381页",
+    "prompt": "氦氖激光的单色性为6×10⁻¹⁰，则其相干长度为多少？",
     "check": "输入相干长度，单位km，保留两位小数。",
     "expected": "1.05",
     "result": "相干长度约1.05 km；所用近似为$L_c\\approx\\lambda^2/\\Delta\\lambda$。",
@@ -1037,6 +1409,13 @@
       "现代光学基础",
       "课程指定"
     ],
-    "figure": ""
+    "figure": "",
+    "figures": [],
+    "source": {
+      "identity": "749401c26001c9899800fcc84598fa634b07720052bd0a1ea5edfde533e64685"
+    },
+    "contentRevision": 1,
+    "solutionRevision": 2,
+    "verified": true
   }
 ]

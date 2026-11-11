@@ -869,6 +869,19 @@ footer {
   height: auto;
   margin: 1rem 0;
 }
+.question-figure {
+  margin: 1rem 0;
+}
+.original-figure {
+  width: auto;
+  max-width: min(100%, 40rem);
+  max-height: 26rem;
+  object-fit: contain;
+}
+.question-figure figcaption {
+  font-size: 0.85rem;
+  color: #555;
+}
 
 .solution .katex-display,
 .reference-answer .katex-display {

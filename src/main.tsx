@@ -51,8 +51,8 @@ function MathText({ text }: { text: string }) {
         img: ({ src, alt }) => (
           <img
             src={
-              src?.startsWith("./figures/")
-                ? import.meta.env.BASE_URL + src.slice(2)
+              src?.startsWith("./figures/") || src?.startsWith("figures/")
+                ? import.meta.env.BASE_URL + src.replace(/^\.\//, "")
                 : src
             }
             alt={alt}
@@ -102,13 +102,16 @@ function Prompt({ q }: { q: Question }) {
   return (
     <div className="prompt">
       <MathText text={q.prompt} />
-      {q.figure && (
-        <img
-          className="study-figure"
-          src={import.meta.env.BASE_URL + q.figure}
-          alt={q.title + "示意图"}
-        />
-      )}
+      {q.figures.map((figure, index) => (
+        <figure className="question-figure" key={figure.src + ":" + index}>
+          <img
+            className="study-figure original-figure"
+            src={import.meta.env.BASE_URL + figure.src}
+            alt={figure.alt || q.title + "题图" + (index + 1)}
+          />
+          {figure.alt && <figcaption>{figure.alt}</figcaption>}
+        </figure>
+      ))}
     </div>
   );
 }
@@ -147,7 +150,7 @@ function Reference({
           姚启钧原著《光学教程》（第六版） · {q.source.section} ·{" "}
           {q.source.page} · {q.id} 题
         </p>
-        <p>题意经转述，参考推导依据本项目的习题整理材料。</p>
+        <p>题面依据教材原文核对；解题假设与补充说明单独列出。</p>
       </details>
     </>
   );
@@ -331,6 +334,19 @@ function App() {
             尚未保存：{error}{" "}
             <button onClick={() => download("opticsdrill-recovery.json", s)}>
               导出当前数据
+            </button>
+          </div>
+        )}
+        {s.migrationNotice && (
+          <div role="status" className="note">
+            <p>{s.migrationNotice}</p>
+            <button onClick={() => setPage("settings")}>
+              查看并导出原题库历史
+            </button>{" "}
+            <button
+              onClick={() => update((x) => ({ ...x, migrationNotice: "" }))}
+            >
+              知道了
             </button>
           </div>
         )}
@@ -951,6 +967,7 @@ function App() {
                   type="file"
                   accept=".json,application/json"
                   onChange={async (e) => {
+                    setPending(null);
                     try {
                       const f = e.target.files?.[0];
                       if (!f) return;
@@ -1005,6 +1022,29 @@ function App() {
             </section>
             <section className="panel">
               <h2>数据维护</h2>
+              {s.legacyArchives.length > 0 && (
+                <section aria-label="原题库历史归档">
+                  <h3>原题库历史归档</h3>
+                  <p>
+                    这些记录保留归档时的完整题库与学习状态，可单独导出，不计入当前题库统计。
+                  </p>
+                  {s.legacyArchives.map((a, i) => (
+                    <p key={a.id}>
+                      {a.reason} · {new Date(a.archivedAt).toLocaleString()}{" "}
+                      <button
+                        onClick={() =>
+                          download(
+                            "opticsdrill-legacy-" + (i + 1) + ".json",
+                            a.raw,
+                          )
+                        }
+                      >
+                        导出历史 {i + 1}
+                      </button>
+                    </p>
+                  ))}
+                </section>
+              )}
               <button
                 className="danger-text"
                 onClick={() => {
@@ -1013,6 +1053,7 @@ function App() {
                       ...initial(),
                       bank: x.bank,
                       settings: x.settings,
+                      legacyArchives: x.legacyArchives,
                     }));
                 }}
               >

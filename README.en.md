@@ -1,10 +1,10 @@
 # OpticsDrill
 
-[Practice online](https://hnnuyuxuan.github.io/OpticsDrill/) · [中文](README.md) · [Course IDs](docs/workspace.md) · [Content review](docs/content-notes.md)
+[Practice online](https://hnnuyuxuan.github.io/OpticsDrill/) · [中文](README.md) · [Course IDs](docs/workspace.md) · [Content review](docs/content-notes.md) · [Per-exercise sources](docs/content-review.md)
 
 ![From interference to quantum optics](docs/assets/cover.en.png)
 
-A browser-based study app for **52 course-selected exercises** from *Optics Tutorial*, sixth edition, originally authored by Yao Qijun. It brings key-result checks, handwritten derivations, self-assessment, corrections and spaced review together. The interface and exercise content are in Chinese.
+A browser-based study app for **52 course-selected exercises** from *Optics Tutorial*, sixth edition, originally authored by Yao Qijun. It brings key-result checks, handwritten derivations, self-assessment, corrections and spaced review together. The interface and exercise content are in Chinese. Prompts preserve the complete PDF wording; the three original exercise figures are cropped directly from the PDF. Answer diagrams are labeled separately.
 
 | Interference | Diffraction | Geometrical optics | Optical instruments | Polarization | Absorption, scattering & dispersion | Quantum nature of light | Modern optics |
 |---:|---:|---:|---:|---:|---:|---:|---:|
@@ -27,7 +27,7 @@ Recorded from the production preview: exercise 1.1, an input of 4.00, correction
 
 <img src="docs/assets/mobile.png" alt="Optics exercises and equations on mobile" width="390" />
 
-Progress and drafts stay in this browser's local storage and survive refreshes. OpticsDrill uses its own app identity. Export a backup before clearing browser data or changing devices. This static app does not upload learning records to a server.
+Progress and drafts stay in this browser's local storage and survive refreshes. OpticsDrill uses its own app identity. On the first upgrade, the previous bank, records and draft are archived intact and can be exported in Settings; progress for the rebuilt bank starts fresh. Export a backup before clearing browser data or changing devices. This static app does not upload learning records to a server.
 
 ### Run and maintain
 
@@ -47,12 +47,12 @@ Open `http://127.0.0.1:5173/OpticsDrill/` for the production preview. For develo
 
 ![Editable data and application architecture](docs/assets/architecture.en.svg)
 
-Edit prompts and checks in `sources/questions.json`, and full solutions in `sources/solutions/*.md`. The generator follows the exercise list in `sources/meta.json`; chapter structure and counts come from that list. `scripts/figures.mjs` creates the original SVG diagrams, and KaTeX renders mathematics. Increment `bankVersion` and solution `revision` according to the meaning of a change, preserving source-identity compatibility rules.
+Edit prompts and checks in `sources/questions.json`, and full solutions in `sources/solutions/*.md`. The generator follows the exercise list in `sources/meta.json`; chapter structure and counts come from that list. Original exercise figures are stored in `public/figures/q-*.png`. `scripts/figures.mjs` maintains answer diagrams and legacy assets; KaTeX renders mathematics. `sources/provenance.json` locks reviewed prompt and image hashes; unverified or mismatched data is rejected by the generator. Maintain stable source identities, question `contentRevision` and solution `revision` separately, and increment `bankVersion` for publication.
 
 GitHub Actions checks generated-file consistency, formatting, tests and the production build before deploying to `/OpticsDrill/`. Deployment follows the [Vite guide](https://vite.dev/guide/static-deploy) and [GitHub Pages workflow guide](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ### Sources and license
 
-See the [maintenance notes](docs/workspace.md) for the exact selected IDs and printed-page attribution. Public prompts are paraphrased and key diagrams are original SVGs. Textbook scans, original exercise crops and source HTML/Markdown remain private in the ignored local folder `.local/materials/`. Printed-page numbers and PDF page indices are recorded separately.
+See the [maintenance notes](docs/workspace.md) for the exact selected IDs and printed-page attribution. Public prompts preserve the complete PDF wording, and original exercise figures are cropped from the PDF. Textbook scans, original exercise crops and source HTML/Markdown remain private in the ignored local folder `.local/materials/`. Printed-page numbers and PDF page indices are recorded separately.
 
-Adapted from [ElectromagnetismDrill](https://github.com/HNNUYUXUAN/ElectromagnetismDrill/tree/e33c9213ac42ec4f0c0ab5dc5e7ee635dda6eca3) at `e33c9213ac42ec4f0c0ab5dc5e7ee635dda6eca3`, retaining its MIT attribution and lockfile. Application code is [MIT licensed](LICENSE). Textbook and source-exercise rights remain with their respective owners. The covers are ChatGPT-generated conceptual illustrations; scientific and architecture diagrams are editable SVGs. See [media notes](docs/media.md).
+Adapted from [ElectromagnetismDrill](https://github.com/HNNUYUXUAN/ElectromagnetismDrill/tree/e33c9213ac42ec4f0c0ab5dc5e7ee635dda6eca3) at `e33c9213ac42ec4f0c0ab5dc5e7ee635dda6eca3`, retaining its MIT attribution and lockfile. Application code is [MIT licensed](LICENSE). Textbook and source-exercise rights remain with their respective owners. The covers are ChatGPT-generated conceptual illustrations; answer and architecture diagrams are editable SVGs, while exercise figures retain the original textbook artwork. See [media notes](docs/media.md).

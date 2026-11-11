@@ -1,5 +1,10 @@
 import { z } from "zod";
 import bankData from "./data/bank.json";
+const localFigure = /^figures\/(?:[\w-]+\/)*[\w.-]+\.(?:png|webp|svg)$/i;
+const figureSchema = z.object({
+  src: z.string().regex(localFigure),
+  alt: z.string().optional(),
+});
 const variantSchema = z.object({
   id: z.enum(["common", "primary", "alternate"]),
   solution: z.string().min(1),
@@ -12,28 +17,42 @@ export const bankSchema = z
     categories: z.array(z.object({ id: z.string(), name: z.string() })).min(1),
     questions: z
       .array(
-        z.object({
-          id: z.string().min(1),
-          categoryId: z.string(),
-          title: z.string().min(1),
-          prompt: z.string().min(1),
-          figure: z.string().regex(/^(?:figures\/[\w.-]+\.svg)?$/),
-          check: z.string().min(1),
-          expected: z.string().min(1),
-          result: z.string().min(1),
-          judgment: z.object({
-            correct: z.string().min(1),
-            incorrect: z.string().min(1),
-            reason: z.string().min(1),
-          }),
-          tags: z.array(z.string()),
-          source: z.object({
-            section: z.string().min(1),
-            page: z.string().min(1),
-            identity: z.string().min(1),
-          }),
-          variants: z.array(variantSchema).min(1),
-        }),
+        z
+          .object({
+            id: z.string().min(1),
+            categoryId: z.string(),
+            title: z.string().min(1),
+            prompt: z.string().min(1),
+            figure: z
+              .string()
+              .refine((p) => !p || localFigure.test(p))
+              .default(""),
+            figures: z.array(figureSchema).default([]),
+            contentRevision: z.number().int().positive().default(1),
+            check: z.string().min(1),
+            expected: z.string().min(1),
+            result: z.string().min(1),
+            judgment: z.object({
+              correct: z.string().min(1),
+              incorrect: z.string().min(1),
+              reason: z.string().min(1),
+            }),
+            tags: z.array(z.string()),
+            source: z.object({
+              section: z.string().min(1),
+              page: z.string().min(1),
+              identity: z.string().min(1),
+            }),
+            variants: z.array(variantSchema).min(1),
+          })
+          .transform((q) => ({
+            ...q,
+            figures: q.figures.length
+              ? q.figures
+              : q.figure
+                ? [{ src: q.figure, alt: q.title + "示意图" }]
+                : [],
+          })),
       )
       .min(1),
   })
@@ -116,7 +135,7 @@ const sessionSchema = z.object({
 });
 export const stateSchema = z
   .object({
-    schemaVersion: z.literal(1),
+    schemaVersion: z.union([z.literal(1), z.literal(2)]),
     app: z.literal("OpticsDrill"),
     bank: bankSchema,
     attempts: z.array(attemptSchema),
@@ -127,6 +146,17 @@ export const stateSchema = z
       autoNext: z.boolean(),
     }),
     session: sessionSchema.nullable(),
+    legacyArchives: z
+      .array(
+        z.object({
+          id: z.string(),
+          reason: z.string(),
+          archivedAt: z.string(),
+          raw: z.string(),
+        }),
+      )
+      .default([]),
+    migrationNotice: z.string().default(""),
   })
   .superRefine((s, c) => {
     if (new Set(s.attempts.map((a) => a.id)).size !== s.attempts.length)
@@ -150,34 +180,56 @@ export type State = z.infer<typeof stateSchema>;
 export type Attempt = z.infer<typeof attemptSchema>;
 export type Progress = z.infer<typeof progressSchema>;
 export const initial = (): State => ({
-  schemaVersion: 1,
+  schemaVersion: 2,
   app: "OpticsDrill",
   bank,
   attempts: [],
   progress: {},
   settings: { profile: "primary", strict: false, autoNext: true },
   session: null,
+  legacyArchives: [],
+  migrationNotice: "",
 });
 export const STORAGE = "opticsdrill.v1";
-export function restoreState(saved: State): State {
-  const bundled =
-    saved.bank.questions.length === bank.questions.length &&
-    saved.bank.questions.every((q) =>
-      bank.questions.some(
-        (fresh) =>
-          fresh.id === q.id && fresh.source.identity === q.source.identity,
-      ),
-    );
-  return bundled && saved.bank.bankVersion < bank.bankVersion
+function archive(
+  s: State,
+  reason: string,
+  raw?: string,
+): State["legacyArchives"] {
+  // Keep existing archives alongside the new snapshot, never nest their bodies.
+  const snapshot = raw ?? JSON.stringify({ ...s, legacyArchives: [] });
+  return [
+    ...s.legacyArchives,
+    {
+      id: crypto.randomUUID(),
+      reason,
+      archivedAt: new Date().toISOString(),
+      raw: snapshot,
+    },
+  ];
+}
+export function restoreState(saved: State, raw?: string): State {
+  if (saved.schemaVersion === 1 && saved.bank.bankVersion <= 2) {
+    return {
+      ...initial(),
+      settings: saved.settings,
+      legacyArchives: archive(saved, "原题库重建前的完整学习数据", raw),
+      migrationNotice:
+        "题库已重建。原有题库、练习历史与草稿已完整归档，可在设置中导出；新版学习进度从零开始。",
+    };
+  }
+  // Source identities are used per question during reconciliation, not as a
+  // whole-bank gate that can prevent corrected bundled content from loading.
+  return saved.bank.bankVersion < bank.bankVersion
     ? upgradeBank(saved, bank)
-    : saved;
+    : { ...saved, schemaVersion: 2 };
 }
 export function load() {
   try {
     const raw = localStorage.getItem(STORAGE);
     const saved = raw ? stateSchema.parse(JSON.parse(raw)) : initial();
     return {
-      state: restoreState(saved),
+      state: restoreState(saved, raw ?? undefined),
       error: "",
     };
   } catch {
@@ -440,20 +492,60 @@ export function importData(raw: string): {
 } {
   const data = JSON.parse(raw);
   return data && typeof data === "object" && "schemaVersion" in data
-    ? { type: "backup", data: restoreState(stateSchema.parse(data)) }
+    ? { type: "backup", data: restoreState(stateSchema.parse(data), raw) }
     : { type: "bank", data: bankSchema.parse(data) };
 }
 export function replaceBank(s: State, b: Bank): State {
-  const progress = { ...s.progress };
-  for (const q of b.questions)
-    for (const v of q.variants)
-      for (const prefix of ["", "syntax:"]) {
-        const k = prefix + q.id + ":" + v.id;
-        const p = progress[k];
-        if (p && p.revision !== v.revision)
-          progress[k] = { ...p, streak: 0, due: day(), revision: v.revision };
-      }
-  return { ...s, bank: b, progress, session: null };
+  const unchanged = (qid: string, variantId: string) => {
+    const old = s.bank.questions.find((q) => q.id === qid);
+    const fresh = b.questions.find((q) => q.id === qid);
+    return (
+      !!old &&
+      !!fresh &&
+      old.source.identity === fresh.source.identity &&
+      old.contentRevision === fresh.contentRevision &&
+      old.expected === fresh.expected &&
+      old.variants.some(
+        (v) =>
+          v.id === variantId &&
+          fresh.variants.some(
+            (n) => n.id === v.id && n.revision === v.revision,
+          ),
+      )
+    );
+  };
+  const stableKeys = new Set(
+    b.questions.flatMap((q) =>
+      q.variants
+        .filter((v) => unchanged(q.id, v.id))
+        .flatMap((v) => [q.id + ":" + v.id, "syntax:" + q.id + ":" + v.id]),
+    ),
+  );
+  const progress = Object.fromEntries(
+    Object.entries(s.progress).filter(([k]) => stableKeys.has(k)),
+  );
+  const attempts = s.attempts.filter((a) => stableKeys.has(a.key));
+  const changed =
+    attempts.length !== s.attempts.length ||
+    Object.keys(progress).length !== Object.keys(s.progress).length ||
+    !!s.session?.pool.some((qid) => {
+      const old = s.bank.questions.find((q) => q.id === qid);
+      return !old || !unchanged(qid, answer(old, s.session!.config.profile).id);
+    });
+  return {
+    ...s,
+    schemaVersion: 2,
+    bank: b,
+    progress,
+    attempts,
+    session: null,
+    legacyArchives: changed
+      ? archive(s, "题库更新前的历史记录（含已变化题目）")
+      : s.legacyArchives,
+    migrationNotice: changed
+      ? "题库已更新，变化题目的原有记录与草稿已归档，其新版进度重新开始。"
+      : s.migrationNotice,
+  };
 }
 export function upgradeBank(s: State, b: Bank): State {
   const updated = replaceBank(s, b);
@@ -469,6 +561,8 @@ export function upgradeBank(s: State, b: Bank): State {
       return (
         a.id === v.id &&
         a.revision === v.revision &&
+        old.source.identity === fresh.source.identity &&
+        old.contentRevision === fresh.contentRevision &&
         old.expected === fresh.expected
       );
     })

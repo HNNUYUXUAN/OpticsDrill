@@ -4,6 +4,7 @@
 - desktop.png / mobile.png：固定Playwright Chromium在1440px / 390px宽度的真实生产预览截图。 / Real production-preview screenshots.
 - training.gif：真实训练的6帧，统一1440×1000，按原始操作顺序合成；仅作帧率与调色板编码。 / Six real UI frames, 1440×1000, preserved in interaction order; timing and palette encoding only.
 - architecture.svg / architecture.en.svg：仓库维护的SVG架构源图。 / Editable architecture sources.
-- public/figures/*.svg：由scripts/figures.mjs生成的原创物理示意图。 / Original scientific schematics generated from repository code.
+- public/figures/q-*.png：1.19、3.3、3.21的PDF原题图，直接裁取原扫描像素，保留题注与字母。 / Original textbook figures cropped directly from PDF pages.
+- public/figures/hydrogen-levels.svg：8.1的解答能级图，非原题附图。其余旧SVG保留供历史题库资源兼容。 / An answer diagram for 8.1; other legacy SVG assets remain for older banks.
 
 候选原图、下载记录、哈希与选择依据保存在本机忽略目录.local/showcase/。 / Candidate originals and private generation evidence remain in .local/showcase/.

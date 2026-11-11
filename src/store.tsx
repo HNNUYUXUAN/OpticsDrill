@@ -1,4 +1,10 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  type ReactNode,
+} from "react";
 import { load, STORAGE, type State } from "./core";
 const Context = createContext<{
   state: State;
@@ -10,6 +16,18 @@ export function Store({ children }: { children: ReactNode }) {
   const [state, set] = useState(loaded.state);
   const [error, setError] = useState(loaded.error);
   const [blocked, setBlocked] = useState(!!loaded.error);
+  useEffect(() => {
+    if (loaded.error) return;
+    const raw = localStorage.getItem(STORAGE);
+    const restored = JSON.stringify(loaded.state);
+    if (raw && raw !== restored) {
+      try {
+        localStorage.setItem(STORAGE, restored);
+      } catch {
+        setError("迁移后的数据尚未保存，请先导出完整备份与原题库历史。");
+      }
+    }
+  }, [loaded]);
   function update(fn: (s: State) => State, recover = false) {
     const value = fn(state);
     try {
